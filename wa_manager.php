@@ -170,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_SERVER['CONTENT_TYPE']) &&
     try {
         $ins = $pdo->prepare("
             INSERT INTO wa_accounts
-              (uaer_id, business_account_id, phone_number_id, phone_number, access_token)
+              (user_id, business_account_id, phone_number_id, phone_number, access_token)
             VALUES
               (:uid, :w, :p, :n, :t)
         ");
